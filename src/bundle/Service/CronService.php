@@ -2,7 +2,7 @@
 
 namespace Edgar\CronBundle\Service;
 
-use Doctrine\Bundle\DoctrineBundle\Registry;
+use Doctrine\Persistence\ManagerRegistry;
 use Edgar\Cron\Cron\CronInterface;
 use Edgar\Cron\Handler\CronHandler;
 use Edgar\CronBundle\Entity\EdgarCron;
@@ -25,9 +25,9 @@ class CronService
      * CronService constructor.
      *
      * @param CronHandler $cronHandler cron handler
-     * @param Registry $doctrineRegistry doctrine registry
+     * @param ManagerRegistry $doctrineRegistry doctrine registry
      */
-    public function __construct(CronHandler $cronHandler, Registry $doctrineRegistry)
+    public function __construct(CronHandler $cronHandler, ManagerRegistry $doctrineRegistry)
     {
         $this->cronHandler = $cronHandler;
         $entityManager = $doctrineRegistry->getManager();

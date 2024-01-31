@@ -4,7 +4,7 @@ namespace Edgar\Cron\Cron;
 
 use Cron\CronExpression;
 use Edgar\Cron\Repository\EdgarCronRepository;
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * Class AbstractCron.
  */
-abstract class AbstractCron extends ContainerAwareCommand implements CronInterface
+abstract class AbstractCron extends Command implements CronInterface
 {
     /** @var string $minute minute expression part */
     protected $minute = '*';

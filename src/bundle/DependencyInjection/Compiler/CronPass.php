@@ -3,7 +3,7 @@
 namespace Edgar\CronBundle\DependencyInjection\Compiler;
 
 use Edgar\Cron\Handler\CronHandler;
-use EzSystems\EzPlatformAdminUi\Exception\InvalidArgumentException;
+use Ibexa\AdminUi\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
